@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "LEFT",
+    "keyBindingName": "Omnitrix Dial Left",
+    "keyBindingCategoryKey": "omnitrix",
+    "onKeyPressed": {
+      "name": "OmnitrixDialLeftOnKeyPressed"
+    }
+  }
+}

@@ -1,1 +1,8 @@
-{}
+{
+  "key.ben_10.activate_omnitrix_keybinds": "Activate Omnitrix",
+  "key.ben_10.omnitrix_dial_left": "Omnitrix Dial Left",
+  "key.ben_10.omnitrix_dial_right": "Omnitrix Dial Right",
+  "key.categories.omnitrix": "Omnitrix",
+  "item.ben_10.omnitrix": "Omnitrix",
+  "key.ben_10.omnitrix_dial_press": "Press Omnitrix Dial"
+}

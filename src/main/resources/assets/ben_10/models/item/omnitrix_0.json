@@ -1,0 +1,7 @@
+{
+  "parent": "ben_10:custom/omnitrix_timed_out",
+  "textures": {
+    "0": "ben_10:block/omnitrix",
+    "particle": "ben_10:item/omnitrix"
+  }
+}

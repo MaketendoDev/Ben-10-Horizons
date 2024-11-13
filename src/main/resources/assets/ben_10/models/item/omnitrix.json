@@ -1,0 +1,21 @@
+{
+  "parent": "ben_10:custom/omnitrix",
+  "textures": {
+    "0": "ben_10:block/omnitrix",
+    "particle": "ben_10:item/omnitrix"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "ben_10:omnitrix_timed_out": 1
+      },
+      "model": "ben_10:item/omnitrix_0"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_activated": 1
+      },
+      "model": "ben_10:item/omnitrix_1"
+    }
+  ]
+}

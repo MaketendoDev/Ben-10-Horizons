@@ -1,4 +1,4 @@
-package net.maketendo.ben;
+package net.maketendo.ben_ten;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -21,6 +21,9 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.Minecraft;
+
+import net.maketendo.ben_ten.init.Ben10ModTabs;
+import net.maketendo.ben_ten.init.Ben10ModItems;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -48,6 +51,10 @@ public class Ben10Mod {
 		// End of user code block mod constructor
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		Ben10ModItems.REGISTRY.register(bus);
+
+		Ben10ModTabs.REGISTRY.register(bus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

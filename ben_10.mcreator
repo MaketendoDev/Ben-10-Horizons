@@ -1,29 +1,397 @@
 {
-  "mod_elements": [],
-  "variable_elements": [],
+  "mod_elements": [
+    {
+      "name": "Omnitrix",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnitrix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/item/OmnitrixItem.java",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_1.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_0.json"
+        ]
+      }
+    },
+    {
+      "name": "OmnitrixTimedOutValueProvider",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnitrix_timed_out_value_provider",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixTimedOutValueProviderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OmnitrixActivatedValueProvider",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnitrix_activated_value_provider",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixActivatedValueProviderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ActivateOmnitrixKeybinds",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "activate_omnitrix_keybinds",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/network/ActivateOmnitrixKeybindsMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "ActivateOmnitrixKeybindsOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "activate_omnitrix_keybinds_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/ActivateOmnitrixKeybindsOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OmnitrixItemInInventoryTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnitrix_item_in_inventory_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixItemInInventoryTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OmnitrixDialLeft",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnitrix_dial_left",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/network/OmnitrixDialLeftMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "OmnitrixDialRight",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnitrix_dial_right",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/network/OmnitrixDialRightMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "OmnitrixDialLeftOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnitrix_dial_left_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixDialLeftOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OmnitrixAlienRegistry",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnitrix_alien_registry",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixAlienRegistryProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OmnitrixDialRightOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnitrix_dial_right_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixDialRightOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OmnitrixDialPress",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnitrix_dial_press",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/network/OmnitrixDialPressMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "OmnitrixDialPressOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnitrix_dial_press_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixDialPressOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GrayMatterRenderer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gray_matter_renderer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/GrayMatterRendererProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AlienChatMixin",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "alien_chat_mixin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/AlienChatMixinProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TimeoutTimer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "timeout_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/TimeoutTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "OmnitrixTimedOut",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "OmnitrixEnabled",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "OmnitrixWorn",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "OmnitrixSlotSelection",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "OmnitrixDialAnimation",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "OmnitrixAlien",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "OmnitrixUpgradeAlienTitles",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "OmnitrixTransformed",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "OmniEnergy",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "100.0"
+    }
+  ],
   "sound_elements": [],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "key.ben_10.activate_omnitrix_keybinds": "Activate Omnitrix",
+      "key.ben_10.omnitrix_dial_left": "Omnitrix Dial Left",
+      "key.ben_10.omnitrix_dial_right": "Omnitrix Dial Right",
+      "key.categories.omnitrix": "Omnitrix",
+      "item.ben_10.omnitrix": "Omnitrix",
+      "key.ben_10.omnitrix_dial_press": "Press Omnitrix Dial"
+    }
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Keybinds",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "ben_10",
     "modName": "Ben 10: Horizons",
     "version": "1.0.0",
     "author": "Maketendo, OG20122012",
+    "websiteURL": "https://mcreator.net",
     "license": "Not specified",
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "kleidersplayerrenderer",
+      "playeranimator"
+    ],
     "currentGenerator": "forge-1.20.1",
-    "modElementsPackage": "net.maketendo.ben"
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.maketendo.ben_ten"
   },
   "mcreatorVersion": 202400232117
 }
