@@ -294,6 +294,61 @@
           }
         ]
       }
+    },
+    {
+      "name": "FourArms",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "four_arms",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/entity/FourArmsEntity.java",
+          "src/main/resources/assets/ben_10/models/item/four_arms_spawn_egg.json",
+          "src/main/resources/data/ben_10/forge/biome_modifier/four_arms_biome_modifier.json",
+          "src/main/java/net/maketendo/ben_ten/client/renderer/FourArmsRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "FourArmsRenderer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "four_arms_renderer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/FourArmsRendererProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TICKER",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ticker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/TICKERProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -319,7 +374,7 @@
       "name": "OmnitrixSlotSelection",
       "type": "number",
       "scope": "player_persistent",
-      "value": "1.0"
+      "value": "0.0"
     },
     {
       "name": "OmnitrixDialAnimation",
@@ -359,10 +414,12 @@
     "en_us": {
       "key.ben_10.activate_omnitrix_keybinds": "Activate Omnitrix",
       "key.ben_10.omnitrix_dial_left": "Omnitrix Dial Left",
+      "item.ben_10.four_arms_spawn_egg": "Four Arms Spawn Egg",
       "key.ben_10.omnitrix_dial_right": "Omnitrix Dial Right",
       "key.categories.omnitrix": "Omnitrix",
       "item.ben_10.omnitrix": "Omnitrix",
-      "key.ben_10.omnitrix_dial_press": "Press Omnitrix Dial"
+      "key.ben_10.omnitrix_dial_press": "Press Omnitrix Dial",
+      "entity.ben_10.four_arms": "Four Arms"
     }
   },
   "foldersRoot": {

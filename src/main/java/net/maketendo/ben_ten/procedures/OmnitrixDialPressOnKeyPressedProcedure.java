@@ -28,7 +28,7 @@ public class OmnitrixDialPressOnKeyPressedProcedure {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.TOTEM_OF_UNDYING, x, y, z, 20, 3, 3, 3, 1);
 				{
-					String _setval = "Gray Matter";
+					String _setval = "Four Arms";
 					entity.getCapability(Ben10ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.OmnitrixAlien = _setval;
 						capability.syncPlayerVariables(entity);

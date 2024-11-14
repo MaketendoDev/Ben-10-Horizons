@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.item.Item;
@@ -25,6 +26,7 @@ import net.maketendo.ben_ten.Ben10Mod;
 public class Ben10ModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, Ben10Mod.MODID);
 	public static final RegistryObject<Item> OMNITRIX = REGISTRY.register("omnitrix", () -> new OmnitrixItem());
+	public static final RegistryObject<Item> FOUR_ARMS_SPAWN_EGG = REGISTRY.register("four_arms_spawn_egg", () -> new ForgeSpawnEggItem(Ben10ModEntities.FOUR_ARMS, -1, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

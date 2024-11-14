@@ -129,7 +129,7 @@ public class Ben10ModVariables {
 		public boolean OmnitrixTimedOut = false;
 		public boolean OmnitrixEnabled = false;
 		public boolean OmnitrixWorn = false;
-		public double OmnitrixSlotSelection = 1.0;
+		public double OmnitrixSlotSelection = 0.0;
 		public double OmnitrixDialAnimation = 0;
 		public String OmnitrixAlien = "\"\"";
 		public boolean OmnitrixUpgradeAlienTitles = false;

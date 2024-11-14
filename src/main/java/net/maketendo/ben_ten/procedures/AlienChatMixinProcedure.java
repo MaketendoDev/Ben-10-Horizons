@@ -43,7 +43,7 @@ public class AlienChatMixinProcedure {
 					event.setResult(Event.Result.DENY);
 				}
 				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("< Galvan> " + text)), false);
+					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("<Galvan> " + text)), false);
 			}
 		}
 		if (((entity.getCapability(Ben10ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new Ben10ModVariables.PlayerVariables())).OmnitrixAlien).equals("Four Arms")) {

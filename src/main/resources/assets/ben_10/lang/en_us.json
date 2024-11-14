@@ -1,8 +1,10 @@
 {
   "key.ben_10.activate_omnitrix_keybinds": "Activate Omnitrix",
   "key.ben_10.omnitrix_dial_left": "Omnitrix Dial Left",
+  "item.ben_10.four_arms_spawn_egg": "Four Arms Spawn Egg",
   "key.ben_10.omnitrix_dial_right": "Omnitrix Dial Right",
   "key.categories.omnitrix": "Omnitrix",
   "item.ben_10.omnitrix": "Omnitrix",
-  "key.ben_10.omnitrix_dial_press": "Press Omnitrix Dial"
+  "key.ben_10.omnitrix_dial_press": "Press Omnitrix Dial",
+  "entity.ben_10.four_arms": "Four Arms"
 }

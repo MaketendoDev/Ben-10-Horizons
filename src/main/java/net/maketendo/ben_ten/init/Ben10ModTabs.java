@@ -23,6 +23,8 @@ public class Ben10ModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
 			tabData.accept(Ben10ModItems.OMNITRIX.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+			tabData.accept(Ben10ModItems.FOUR_ARMS_SPAWN_EGG.get());
 		}
 	}
 }
