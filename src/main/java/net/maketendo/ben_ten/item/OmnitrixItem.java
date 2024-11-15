@@ -18,6 +18,6 @@ public class OmnitrixItem extends Item {
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		if (selected)
-			OmnitrixItemInHandTickProcedure.execute(entity);
+			OmnitrixItemInHandTickProcedure.execute(world, entity);
 	}
 }

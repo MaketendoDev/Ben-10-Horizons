@@ -1,5 +1,5 @@
 {
-  "parent": "ben_10:custom/omnitrix_dial_4",
+  "parent": "ben_10:custom/omnitrix_dial_1",
   "textures": {
     "0": "ben_10:block/omnitrix",
     "1": "ben_10:block/omnitrix_core",

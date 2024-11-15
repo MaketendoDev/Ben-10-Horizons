@@ -42,6 +42,7 @@
           "src/main/resources/assets/ben_10/models/item/omnitrix_15.json",
           "src/main/java/net/maketendo/ben_ten/item/OmnitrixItem.java",
           "src/main/resources/assets/ben_10/models/item/omnitrix_1.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_18.json",
           "src/main/resources/assets/ben_10/models/item/omnitrix_7.json",
           "src/main/resources/assets/ben_10/models/item/omnitrix_11.json",
           "src/main/resources/assets/ben_10/models/item/omnitrix_16.json",
@@ -268,6 +269,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }

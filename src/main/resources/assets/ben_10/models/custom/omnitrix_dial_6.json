@@ -1096,7 +1096,7 @@
       ],
       "light_emission": 15,
       "rotation": {
-        "angle": 45,
+        "angle": 22.5,
         "axis": "y",
         "origin": [
           8,
@@ -1173,7 +1173,7 @@
         9.25
       ],
       "rotation": {
-        "angle": 45,
+        "angle": 22.5,
         "axis": "y",
         "origin": [
           8,

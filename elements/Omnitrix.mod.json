@@ -23,6 +23,63 @@
       {
         "renderType": 1,
         "texture": "null",
+        "customModelName": "omnitrix_active:default",
+        "stateMap": [
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:active",
+              "type": "number"
+            },
+            "value": 1.0
+          }
+        ]
+      },
+      {
+        "renderType": 1,
+        "texture": "null",
+        "customModelName": "omnitrix_nofaceplate_active:default",
+        "stateMap": [
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:active",
+              "type": "number"
+            },
+            "value": 1.0
+          },
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:no_faceplate",
+              "type": "number"
+            },
+            "value": 1.0
+          }
+        ]
+      },
+      {
+        "renderType": 1,
+        "texture": "null",
+        "customModelName": "omnitrix_nofaceplate:default",
+        "stateMap": [
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:no_faceplate",
+              "type": "number"
+            },
+            "value": 1.0
+          }
+        ]
+      },
+      {
+        "renderType": 1,
+        "texture": "null",
         "customModelName": "omnitrix_dial_1:default",
         "stateMap": [
           {
@@ -263,57 +320,16 @@
       {
         "renderType": 1,
         "texture": "null",
-        "customModelName": "omnitrix_active:default",
+        "customModelName": "omnitrix_dial_16:default",
         "stateMap": [
           {
             "property": {
               "min": -1.7976931348623157E308,
               "max": 1.7976931348623157E308,
-              "name": "CUSTOM:active",
+              "name": "CUSTOM:core_dial",
               "type": "number"
             },
-            "value": 1.0
-          }
-        ]
-      },
-      {
-        "renderType": 1,
-        "texture": "null",
-        "customModelName": "omnitrix_nofaceplate_active:default",
-        "stateMap": [
-          {
-            "property": {
-              "min": -1.7976931348623157E308,
-              "max": 1.7976931348623157E308,
-              "name": "CUSTOM:active",
-              "type": "number"
-            },
-            "value": 1.0
-          },
-          {
-            "property": {
-              "min": -1.7976931348623157E308,
-              "max": 1.7976931348623157E308,
-              "name": "CUSTOM:no_faceplate",
-              "type": "number"
-            },
-            "value": 1.0
-          }
-        ]
-      },
-      {
-        "renderType": 1,
-        "texture": "null",
-        "customModelName": "omnitrix_nofaceplate:default",
-        "stateMap": [
-          {
-            "property": {
-              "min": -1.7976931348623157E308,
-              "max": 1.7976931348623157E308,
-              "name": "CUSTOM:no_faceplate",
-              "type": "number"
-            },
-            "value": 1.0
+            "value": 16.0
           }
         ]
       }
