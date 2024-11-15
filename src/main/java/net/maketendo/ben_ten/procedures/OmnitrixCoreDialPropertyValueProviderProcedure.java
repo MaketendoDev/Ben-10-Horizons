@@ -38,7 +38,9 @@ public class OmnitrixCoreDialPropertyValueProviderProcedure {
 			return 14;
 		} else if ((entity.getCapability(Ben10ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new Ben10ModVariables.PlayerVariables())).OmnitrixDial == 15) {
 			return 15;
+		} else if ((entity.getCapability(Ben10ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new Ben10ModVariables.PlayerVariables())).OmnitrixDial == 16) {
+			return 16;
 		}
-		return 1;
+		return 0;
 	}
 }
