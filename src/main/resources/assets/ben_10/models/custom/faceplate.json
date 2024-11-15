@@ -1,0 +1,176 @@
+{
+  "parent": "omnitrix",
+  "elements": [
+    {
+      "from": [
+        6.75,
+        11.45,
+        6.75
+      ],
+      "to": [
+        9.25,
+        12.2,
+        9.25
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          8,
+          11.4125,
+          8
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            7,
+            2,
+            7.5
+          ],
+          "texture": "#1"
+        },
+        "east": {
+          "uv": [
+            0,
+            4,
+            2,
+            4.5
+          ],
+          "texture": "#1"
+        },
+        "south": {
+          "uv": [
+            6,
+            0,
+            8,
+            0.5
+          ],
+          "texture": "#1"
+        },
+        "west": {
+          "uv": [
+            6,
+            2,
+            8,
+            2.5
+          ],
+          "texture": "#1"
+        },
+        "up": {
+          "uv": [
+            4,
+            9,
+            2,
+            7
+          ],
+          "rotation": 90,
+          "texture": "#1"
+        },
+        "down": {
+          "uv": [
+            6,
+            2,
+            4,
+            4
+          ],
+          "rotation": 270,
+          "texture": "#1"
+        }
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "translation": [
+        0,
+        -3.5,
+        0
+      ]
+    },
+    "thirdperson_lefthand": {
+      "translation": [
+        0,
+        -3.5,
+        0
+      ]
+    },
+    "firstperson_righthand": {
+      "translation": [
+        2.5,
+        -2.5,
+        0
+      ]
+    },
+    "firstperson_lefthand": {
+      "translation": [
+        2.5,
+        -2.5,
+        0
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        -6.75,
+        0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        21,
+        -66.75,
+        -34
+      ],
+      "translation": [
+        -2.75,
+        -9.25,
+        0
+      ],
+      "scale": [
+        4,
+        4,
+        4
+      ]
+    },
+    "head": {
+      "translation": [
+        0,
+        3,
+        0
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        78.2,
+        -88.96,
+        168.95
+      ],
+      "translation": [
+        0,
+        0,
+        7.75
+      ],
+      "scale": [
+        2,
+        2,
+        2
+      ]
+    }
+  },
+  "groups": [
+    {
+      "name": "omnitrix_core",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "color": 0,
+      "children": [
+        0
+      ]
+    }
+  ]
+}

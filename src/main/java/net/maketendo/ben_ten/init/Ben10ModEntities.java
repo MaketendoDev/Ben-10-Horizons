@@ -16,16 +16,16 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
-import net.maketendo.ben_ten.entity.FourArmsEntity;
+import net.maketendo.ben_ten.entity.TetramandEntity;
 import net.maketendo.ben_ten.Ben10Mod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Ben10ModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Ben10Mod.MODID);
-	public static final RegistryObject<EntityType<FourArmsEntity>> FOUR_ARMS = register("four_arms",
-			EntityType.Builder.<FourArmsEntity>of(FourArmsEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FourArmsEntity::new)
+	public static final RegistryObject<EntityType<TetramandEntity>> TETRAMAND = register("tetramand",
+			EntityType.Builder.<TetramandEntity>of(TetramandEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TetramandEntity::new)
 
-					.sized(0.6f, 1.8f));
+					.sized(0.9f, 2.4f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -34,12 +34,12 @@ public class Ben10ModEntities {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
-			FourArmsEntity.init();
+			TetramandEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
-		event.put(FOUR_ARMS.get(), FourArmsEntity.createAttributes().build());
+		event.put(TETRAMAND.get(), TetramandEntity.createAttributes().build());
 	}
 }

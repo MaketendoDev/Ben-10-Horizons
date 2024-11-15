@@ -1,10 +1,10 @@
 {
-  "key.ben_10.activate_omnitrix_keybinds": "Activate Omnitrix",
+  "entity.ben_10.tetramand": "Tetramand",
   "key.ben_10.omnitrix_dial_left": "Omnitrix Dial Left",
-  "item.ben_10.four_arms_spawn_egg": "Four Arms Spawn Egg",
+  "item.ben_10.omnitrix_faceplate": "Omnitrix Faceplate",
+  "item.ben_10.tetramand_spawn_egg": "Tetramand Spawn Egg",
   "key.ben_10.omnitrix_dial_right": "Omnitrix Dial Right",
+  "key.ben_10.omnitrix_activate": "Omnitrix Activate",
   "key.categories.omnitrix": "Omnitrix",
-  "item.ben_10.omnitrix": "Omnitrix",
-  "key.ben_10.omnitrix_dial_press": "Press Omnitrix Dial",
-  "entity.ben_10.four_arms": "Four Arms"
+  "item.ben_10.omnitrix": "Omnitrix"
 }

@@ -4,7 +4,7 @@
   "definition": {
     "triggerKey": "RIGHT",
     "keyBindingName": "Omnitrix Dial Right",
-    "keyBindingCategoryKey": "omnitrix",
+    "keyBindingCategoryKey": "misc",
     "onKeyPressed": {
       "name": "OmnitrixDialRightOnKeyPressed"
     }

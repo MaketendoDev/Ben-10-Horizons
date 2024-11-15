@@ -1,6 +1,37 @@
 {
   "mod_elements": [
     {
+      "name": "Render",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/RenderProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "RENDERMORE",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rendermore",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/RENDERMOREProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
       "name": "Omnitrix",
       "type": "item",
       "compiles": true,
@@ -8,73 +39,59 @@
       "registry_name": "omnitrix",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ben_10/models/item/omnitrix_15.json",
           "src/main/java/net/maketendo/ben_ten/item/OmnitrixItem.java",
           "src/main/resources/assets/ben_10/models/item/omnitrix_1.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_7.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_11.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_16.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_4.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_13.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_9.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_14.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_2.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_10.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_6.json",
           "src/main/resources/assets/ben_10/models/item/omnitrix.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_3.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_17.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_8.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_5.json",
+          "src/main/resources/assets/ben_10/models/item/omnitrix_12.json",
           "src/main/resources/assets/ben_10/models/item/omnitrix_0.json"
         ]
       }
     },
     {
-      "name": "OmnitrixTimedOutValueProvider",
+      "name": "OmnitrixCoreDialPropertyValueProvider",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "omnitrix_timed_out_value_provider",
+      "registry_name": "omnitrix_core_dial_property_value_provider",
       "metadata": {
         "return_type": "number",
         "files": [
-          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixTimedOutValueProviderProcedure.java"
+          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixCoreDialPropertyValueProviderProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
           }
-        ]
-      }
-    },
-    {
-      "name": "OmnitrixActivatedValueProvider",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "omnitrix_activated_value_provider",
-      "metadata": {
-        "return_type": "number",
-        "files": [
-          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixActivatedValueProviderProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "ActivateOmnitrixKeybinds",
-      "type": "keybind",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "activate_omnitrix_keybinds",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/ben_ten/network/ActivateOmnitrixKeybindsMessage.java"
         ]
       },
-      "path": "~/Keybinds"
+      "path": "~/OmnitrixRenderer"
     },
     {
-      "name": "ActivateOmnitrixKeybindsOnKeyPressed",
+      "name": "OmnitrixActivePropertyValueProvider",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "activate_omnitrix_keybinds_on_key_pressed",
+      "registry_name": "omnitrix_active_property_value_provider",
       "metadata": {
+        "return_type": "number",
         "files": [
-          "src/main/java/net/maketendo/ben_ten/procedures/ActivateOmnitrixKeybindsOnKeyPressedProcedure.java"
+          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixActivePropertyValueProviderProcedure.java"
         ],
         "dependencies": [
           {
@@ -82,17 +99,19 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/OmnitrixRenderer"
     },
     {
-      "name": "OmnitrixItemInInventoryTick",
+      "name": "OmnitrixNoCorePropertyValueProvider",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "omnitrix_item_in_inventory_tick",
+      "registry_name": "omnitrix_no_core_property_value_provider",
       "metadata": {
+        "return_type": "number",
         "files": [
-          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixItemInInventoryTickProcedure.java"
+          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixNoCorePropertyValueProviderProcedure.java"
         ],
         "dependencies": [
           {
@@ -100,7 +119,28 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/OmnitrixRenderer"
+    },
+    {
+      "name": "OmnitrixNoFaceplatePropertyValueProvider",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnitrix_no_faceplate_property_value_provider",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixNoFaceplatePropertyValueProviderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OmnitrixRenderer"
     },
     {
       "name": "OmnitrixDialLeft",
@@ -129,6 +169,35 @@
       "path": "~/Keybinds"
     },
     {
+      "name": "OmnitrixActivate",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnitrix_activate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/network/OmnitrixActivateMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Tetramand",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tetramand",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/entity/TetramandEntity.java",
+          "src/main/java/net/maketendo/ben_ten/client/renderer/TetramandRenderer.java",
+          "src/main/resources/assets/ben_10/models/item/tetramand_spawn_egg.json",
+          "src/main/resources/data/ben_10/forge/biome_modifier/tetramand_biome_modifier.json"
+        ]
+      },
+      "path": "~/Alien Mob"
+    },
+    {
       "name": "OmnitrixDialLeftOnKeyPressed",
       "type": "procedure",
       "compiles": true,
@@ -144,25 +213,8 @@
             "type": "entity"
           }
         ]
-      }
-    },
-    {
-      "name": "OmnitrixAlienRegistry",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "omnitrix_alien_registry",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixAlienRegistryProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
+      },
+      "path": "~/Keybinds"
     },
     {
       "name": "OmnitrixDialRightOnKeyPressed",
@@ -180,64 +232,37 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Keybinds"
     },
     {
-      "name": "OmnitrixDialPress",
-      "type": "keybind",
+      "name": "OmnitrixActivateOnKeyPressed",
+      "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "omnitrix_dial_press",
+      "registry_name": "omnitrix_activate_on_key_pressed",
       "metadata": {
         "files": [
-          "src/main/java/net/maketendo/ben_ten/network/OmnitrixDialPressMessage.java"
+          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixActivateOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       },
       "path": "~/Keybinds"
     },
     {
-      "name": "OmnitrixDialPressOnKeyPressed",
+      "name": "OmnitrixItemInHandTick",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "omnitrix_dial_press_on_key_pressed",
+      "registry_name": "omnitrix_item_in_hand_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixDialPressOnKeyPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "GrayMatterRenderer",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gray_matter_renderer",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/ben_ten/procedures/GrayMatterRendererProcedure.java"
+          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixItemInHandTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -252,14 +277,52 @@
       }
     },
     {
-      "name": "AlienChatMixin",
+      "name": "DialHandler",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "alien_chat_mixin",
+      "registry_name": "dial_handler",
       "metadata": {
         "files": [
-          "src/main/java/net/maketendo/ben_ten/procedures/AlienChatMixinProcedure.java"
+          "src/main/java/net/maketendo/ben_ten/procedures/DialHandlerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OmnitrixRenderer"
+    },
+    {
+      "name": "NoFacePlate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "no_face_plate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/NoFacePlateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Faceplate Removal"
+    },
+    {
+      "name": "OmnitrixFaceplateRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnitrix_faceplate_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/OmnitrixFaceplateRightclickedProcedure.java"
         ],
         "dependencies": [
           {
@@ -267,144 +330,64 @@
             "type": "entity"
           },
           {
-            "name": "text",
-            "type": "string"
-          },
-          {
-            "name": "world",
-            "type": "world"
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
-      }
+      },
+      "path": "~/Faceplate Removal"
     },
     {
-      "name": "TimeoutTimer",
-      "type": "procedure",
+      "name": "OmnitrixFaceplate",
+      "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "timeout_timer",
+      "registry_name": "omnitrix_faceplate",
       "metadata": {
         "files": [
-          "src/main/java/net/maketendo/ben_ten/procedures/TimeoutTimerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/ben_10/models/item/omnitrix_faceplate.json",
+          "src/main/java/net/maketendo/ben_ten/item/OmnitrixFaceplateItem.java"
         ]
-      }
-    },
-    {
-      "name": "FourArms",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "four_arms",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/ben_ten/entity/FourArmsEntity.java",
-          "src/main/resources/assets/ben_10/models/item/four_arms_spawn_egg.json",
-          "src/main/resources/data/ben_10/forge/biome_modifier/four_arms_biome_modifier.json",
-          "src/main/java/net/maketendo/ben_ten/client/renderer/FourArmsRenderer.java"
-        ]
-      }
-    },
-    {
-      "name": "FourArmsRenderer",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "four_arms_renderer",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/ben_ten/procedures/FourArmsRendererProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "TICKER",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ticker",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/ben_ten/procedures/TICKERProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
+      },
+      "path": "~/Faceplate Removal"
     }
   ],
   "variable_elements": [
     {
-      "name": "OmnitrixTimedOut",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "OmnitrixEnabled",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "OmnitrixWorn",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "OmnitrixSlotSelection",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0.0"
-    },
-    {
-      "name": "OmnitrixDialAnimation",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "OmnitrixAlien",
+      "name": "DNA",
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
     },
     {
-      "name": "OmnitrixUpgradeAlienTitles",
+      "name": "WearingOmnitrix",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
     },
     {
-      "name": "OmnitrixTransformed",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "OmniEnergy",
+      "name": "OmnitrixDial",
       "type": "number",
       "scope": "player_persistent",
-      "value": "100.0"
+      "value": "0"
+    },
+    {
+      "name": "OmnitrixNoCore",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "OmnitrixActive",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "OmnitrixNoFaceplate",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -412,21 +395,41 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "key.ben_10.activate_omnitrix_keybinds": "Activate Omnitrix",
+      "entity.ben_10.tetramand": "Tetramand",
       "key.ben_10.omnitrix_dial_left": "Omnitrix Dial Left",
-      "item.ben_10.four_arms_spawn_egg": "Four Arms Spawn Egg",
+      "item.ben_10.omnitrix_faceplate": "Omnitrix Faceplate",
+      "item.ben_10.tetramand_spawn_egg": "Tetramand Spawn Egg",
       "key.ben_10.omnitrix_dial_right": "Omnitrix Dial Right",
+      "key.ben_10.omnitrix_activate": "Omnitrix Activate",
       "key.categories.omnitrix": "Omnitrix",
-      "item.ben_10.omnitrix": "Omnitrix",
-      "key.ben_10.omnitrix_dial_press": "Press Omnitrix Dial",
-      "entity.ben_10.four_arms": "Four Arms"
+      "item.ben_10.omnitrix": "Omnitrix"
     }
   },
   "foldersRoot": {
     "name": "~",
     "children": [
       {
+        "name": "OmnitrixRenderer",
+        "children": []
+      },
+      {
         "name": "Keybinds",
+        "children": []
+      },
+      {
+        "name": "Aliens",
+        "children": []
+      },
+      {
+        "name": "Alien Mob",
+        "children": []
+      },
+      {
+        "name": "Codes",
+        "children": []
+      },
+      {
+        "name": "Faceplate Removal",
         "children": []
       }
     ]

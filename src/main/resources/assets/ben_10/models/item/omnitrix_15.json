@@ -1,0 +1,8 @@
+{
+  "parent": "ben_10:custom/omnitrix_active",
+  "textures": {
+    "0": "ben_10:block/omnitrix",
+    "1": "ben_10:block/omnitrix_core",
+    "particle": "ben_10:item/null"
+  }
+}

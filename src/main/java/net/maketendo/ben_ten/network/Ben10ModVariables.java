@@ -76,15 +76,12 @@ public class Ben10ModVariables {
 			event.getOriginal().revive();
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-			clone.OmnitrixTimedOut = original.OmnitrixTimedOut;
-			clone.OmnitrixEnabled = original.OmnitrixEnabled;
-			clone.OmnitrixWorn = original.OmnitrixWorn;
-			clone.OmnitrixSlotSelection = original.OmnitrixSlotSelection;
-			clone.OmnitrixDialAnimation = original.OmnitrixDialAnimation;
-			clone.OmnitrixAlien = original.OmnitrixAlien;
-			clone.OmnitrixUpgradeAlienTitles = original.OmnitrixUpgradeAlienTitles;
-			clone.OmnitrixTransformed = original.OmnitrixTransformed;
-			clone.OmniEnergy = original.OmniEnergy;
+			clone.DNA = original.DNA;
+			clone.WearingOmnitrix = original.WearingOmnitrix;
+			clone.OmnitrixDial = original.OmnitrixDial;
+			clone.OmnitrixNoCore = original.OmnitrixNoCore;
+			clone.OmnitrixActive = original.OmnitrixActive;
+			clone.OmnitrixNoFaceplate = original.OmnitrixNoFaceplate;
 			if (!event.isWasDeath()) {
 			}
 			if (!event.getEntity().level().isClientSide()) {
@@ -126,15 +123,12 @@ public class Ben10ModVariables {
 	}
 
 	public static class PlayerVariables {
-		public boolean OmnitrixTimedOut = false;
-		public boolean OmnitrixEnabled = false;
-		public boolean OmnitrixWorn = false;
-		public double OmnitrixSlotSelection = 0.0;
-		public double OmnitrixDialAnimation = 0;
-		public String OmnitrixAlien = "\"\"";
-		public boolean OmnitrixUpgradeAlienTitles = false;
-		public boolean OmnitrixTransformed = false;
-		public double OmniEnergy = 100.0;
+		public String DNA = "\"\"";
+		public boolean WearingOmnitrix = false;
+		public double OmnitrixDial = 0;
+		public boolean OmnitrixNoCore = false;
+		public boolean OmnitrixActive = false;
+		public boolean OmnitrixNoFaceplate = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -143,29 +137,23 @@ public class Ben10ModVariables {
 
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putBoolean("OmnitrixTimedOut", OmnitrixTimedOut);
-			nbt.putBoolean("OmnitrixEnabled", OmnitrixEnabled);
-			nbt.putBoolean("OmnitrixWorn", OmnitrixWorn);
-			nbt.putDouble("OmnitrixSlotSelection", OmnitrixSlotSelection);
-			nbt.putDouble("OmnitrixDialAnimation", OmnitrixDialAnimation);
-			nbt.putString("OmnitrixAlien", OmnitrixAlien);
-			nbt.putBoolean("OmnitrixUpgradeAlienTitles", OmnitrixUpgradeAlienTitles);
-			nbt.putBoolean("OmnitrixTransformed", OmnitrixTransformed);
-			nbt.putDouble("OmniEnergy", OmniEnergy);
+			nbt.putString("DNA", DNA);
+			nbt.putBoolean("WearingOmnitrix", WearingOmnitrix);
+			nbt.putDouble("OmnitrixDial", OmnitrixDial);
+			nbt.putBoolean("OmnitrixNoCore", OmnitrixNoCore);
+			nbt.putBoolean("OmnitrixActive", OmnitrixActive);
+			nbt.putBoolean("OmnitrixNoFaceplate", OmnitrixNoFaceplate);
 			return nbt;
 		}
 
 		public void readNBT(Tag Tag) {
 			CompoundTag nbt = (CompoundTag) Tag;
-			OmnitrixTimedOut = nbt.getBoolean("OmnitrixTimedOut");
-			OmnitrixEnabled = nbt.getBoolean("OmnitrixEnabled");
-			OmnitrixWorn = nbt.getBoolean("OmnitrixWorn");
-			OmnitrixSlotSelection = nbt.getDouble("OmnitrixSlotSelection");
-			OmnitrixDialAnimation = nbt.getDouble("OmnitrixDialAnimation");
-			OmnitrixAlien = nbt.getString("OmnitrixAlien");
-			OmnitrixUpgradeAlienTitles = nbt.getBoolean("OmnitrixUpgradeAlienTitles");
-			OmnitrixTransformed = nbt.getBoolean("OmnitrixTransformed");
-			OmniEnergy = nbt.getDouble("OmniEnergy");
+			DNA = nbt.getString("DNA");
+			WearingOmnitrix = nbt.getBoolean("WearingOmnitrix");
+			OmnitrixDial = nbt.getDouble("OmnitrixDial");
+			OmnitrixNoCore = nbt.getBoolean("OmnitrixNoCore");
+			OmnitrixActive = nbt.getBoolean("OmnitrixActive");
+			OmnitrixNoFaceplate = nbt.getBoolean("OmnitrixNoFaceplate");
 		}
 	}
 
@@ -199,15 +187,12 @@ public class Ben10ModVariables {
 			context.enqueueWork(() -> {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-					variables.OmnitrixTimedOut = message.data.OmnitrixTimedOut;
-					variables.OmnitrixEnabled = message.data.OmnitrixEnabled;
-					variables.OmnitrixWorn = message.data.OmnitrixWorn;
-					variables.OmnitrixSlotSelection = message.data.OmnitrixSlotSelection;
-					variables.OmnitrixDialAnimation = message.data.OmnitrixDialAnimation;
-					variables.OmnitrixAlien = message.data.OmnitrixAlien;
-					variables.OmnitrixUpgradeAlienTitles = message.data.OmnitrixUpgradeAlienTitles;
-					variables.OmnitrixTransformed = message.data.OmnitrixTransformed;
-					variables.OmniEnergy = message.data.OmniEnergy;
+					variables.DNA = message.data.DNA;
+					variables.WearingOmnitrix = message.data.WearingOmnitrix;
+					variables.OmnitrixDial = message.data.OmnitrixDial;
+					variables.OmnitrixNoCore = message.data.OmnitrixNoCore;
+					variables.OmnitrixActive = message.data.OmnitrixActive;
+					variables.OmnitrixNoFaceplate = message.data.OmnitrixNoFaceplate;
 				}
 			});
 			context.setPacketHandled(true);

@@ -1,0 +1,7 @@
+{
+  "parent": "ben_10:custom/faceplate",
+  "textures": {
+    "1": "ben_10:block/omnitrix_core",
+    "particle": "ben_10:item/null"
+  }
+}

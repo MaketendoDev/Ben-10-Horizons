@@ -2,20 +2,118 @@
   "parent": "ben_10:custom/omnitrix",
   "textures": {
     "0": "ben_10:block/omnitrix",
-    "particle": "ben_10:item/omnitrix"
+    "1": "ben_10:block/omnitrix_core",
+    "particle": "ben_10:item/null"
   },
   "overrides": [
     {
       "predicate": {
-        "ben_10:omnitrix_timed_out": 1
+        "ben_10:omnitrix_core_dial": 1
       },
       "model": "ben_10:item/omnitrix_0"
     },
     {
       "predicate": {
-        "ben_10:omnitrix_activated": 1
+        "ben_10:omnitrix_core_dial": 2
       },
       "model": "ben_10:item/omnitrix_1"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_core_dial": 3
+      },
+      "model": "ben_10:item/omnitrix_2"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_core_dial": 4
+      },
+      "model": "ben_10:item/omnitrix_3"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_core_dial": 5
+      },
+      "model": "ben_10:item/omnitrix_4"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_core_dial": 6
+      },
+      "model": "ben_10:item/omnitrix_5"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_core_dial": 7
+      },
+      "model": "ben_10:item/omnitrix_6"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_core_dial": 8
+      },
+      "model": "ben_10:item/omnitrix_7"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_core_dial": 9
+      },
+      "model": "ben_10:item/omnitrix_8"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_core_dial": 10
+      },
+      "model": "ben_10:item/omnitrix_9"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_core_dial": 11
+      },
+      "model": "ben_10:item/omnitrix_10"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_core_dial": 12
+      },
+      "model": "ben_10:item/omnitrix_11"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_core_dial": 13
+      },
+      "model": "ben_10:item/omnitrix_12"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_core_dial": 14
+      },
+      "model": "ben_10:item/omnitrix_13"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_core_dial": 15
+      },
+      "model": "ben_10:item/omnitrix_14"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_active": 1
+      },
+      "model": "ben_10:item/omnitrix_15"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_active": 1,
+        "ben_10:omnitrix_no_faceplate": 1
+      },
+      "model": "ben_10:item/omnitrix_16"
+    },
+    {
+      "predicate": {
+        "ben_10:omnitrix_no_faceplate": 1
+      },
+      "model": "ben_10:item/omnitrix_17"
     }
   ]
 }
