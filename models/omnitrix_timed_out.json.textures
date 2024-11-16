@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "omnitrix",
+        "1": "omnitrix_core"
+      },
+      "name": "default"
+    }
+  }
+}

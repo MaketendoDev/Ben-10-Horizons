@@ -269,10 +269,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -351,6 +347,20 @@
         ]
       },
       "path": "~/Faceplate Removal"
+    },
+    {
+      "name": "ClassicOmnitrixEnergy",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "classic_omnitrix_energy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/ben_ten/procedures/ClassicOmnitrixEnergyProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/OmniEnergy"
     }
   ],
   "variable_elements": [
@@ -389,6 +399,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "OmnitrixEnergy",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1000.0"
     }
   ],
   "sound_elements": [],
@@ -431,6 +447,10 @@
       },
       {
         "name": "Faceplate Removal",
+        "children": []
+      },
+      {
+        "name": "OmniEnergy",
         "children": []
       }
     ]

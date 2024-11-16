@@ -82,6 +82,7 @@ public class Ben10ModVariables {
 			clone.OmnitrixNoCore = original.OmnitrixNoCore;
 			clone.OmnitrixActive = original.OmnitrixActive;
 			clone.OmnitrixNoFaceplate = original.OmnitrixNoFaceplate;
+			clone.OmnitrixEnergy = original.OmnitrixEnergy;
 			if (!event.isWasDeath()) {
 			}
 			if (!event.getEntity().level().isClientSide()) {
@@ -129,6 +130,7 @@ public class Ben10ModVariables {
 		public boolean OmnitrixNoCore = false;
 		public boolean OmnitrixActive = false;
 		public boolean OmnitrixNoFaceplate = false;
+		public double OmnitrixEnergy = 1000.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -143,6 +145,7 @@ public class Ben10ModVariables {
 			nbt.putBoolean("OmnitrixNoCore", OmnitrixNoCore);
 			nbt.putBoolean("OmnitrixActive", OmnitrixActive);
 			nbt.putBoolean("OmnitrixNoFaceplate", OmnitrixNoFaceplate);
+			nbt.putDouble("OmnitrixEnergy", OmnitrixEnergy);
 			return nbt;
 		}
 
@@ -154,6 +157,7 @@ public class Ben10ModVariables {
 			OmnitrixNoCore = nbt.getBoolean("OmnitrixNoCore");
 			OmnitrixActive = nbt.getBoolean("OmnitrixActive");
 			OmnitrixNoFaceplate = nbt.getBoolean("OmnitrixNoFaceplate");
+			OmnitrixEnergy = nbt.getDouble("OmnitrixEnergy");
 		}
 	}
 
@@ -193,6 +197,7 @@ public class Ben10ModVariables {
 					variables.OmnitrixNoCore = message.data.OmnitrixNoCore;
 					variables.OmnitrixActive = message.data.OmnitrixActive;
 					variables.OmnitrixNoFaceplate = message.data.OmnitrixNoFaceplate;
+					variables.OmnitrixEnergy = message.data.OmnitrixEnergy;
 				}
 			});
 			context.setPacketHandled(true);
